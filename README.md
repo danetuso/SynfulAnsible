@@ -1,6 +1,6 @@
 # SynfulAnsible
 VERY Simple Ansible configuration for provisioning a server with the Synful PHP Framework.
-
+Synful: https://github.com/nathan-fiscaletti/synful
 ### Steps:
 
 Clone repo to desired location.
