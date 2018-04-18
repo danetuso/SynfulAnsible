@@ -9,7 +9,7 @@ expect "Enter a new MySql root password (leave blank for 'password')"
 send "{{ static_mysql_password }}\r"
 
 expect "Re-Type the new MySql root password"
-send "testpassword\r"
+send "{{ static_mysql_password }}\r"
 
 expect "Allow MySql external access? (y/n)"
 send "n\r"

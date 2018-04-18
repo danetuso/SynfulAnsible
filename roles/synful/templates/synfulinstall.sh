@@ -9,7 +9,7 @@ SYNFUL_VERSION="v2.0.4"                                             #
 SQL_OVER_NETWORK=false                                              #
 #                                                                   #
 # The password to set for the root mysql user.                      #
-MYSQL_PASSWORD="mysqlpassword"                                      #
+MYSQL_PASSWORD=""                                                   #
 #                                                                   #
 ## End Configuration ################################################
 
