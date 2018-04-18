@@ -1,0 +1,6 @@
+---
+ - hosts: all
+   roles:
+     - synful
+   vars:
+     mysql_password: <YourSecurePasswordHere>

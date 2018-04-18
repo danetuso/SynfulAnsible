@@ -1,0 +1,20 @@
+#!/usr/bin/expect
+set timeout -1
+spawn /tmp/synfulinstall.sh
+
+expect "Select Version (leave blank for v2.0.4)"
+send "\r"
+
+expect "Enter a new MySql root password (leave blank for 'password')"
+send "{{ static_mysql_password }}\r"
+
+expect "Re-Type the new MySql root password"
+send "testpassword\r"
+
+expect "Allow MySql external access? (y/n)"
+send "n\r"
+
+expect "Exiting..."
+send "\r"
+
+expect eof

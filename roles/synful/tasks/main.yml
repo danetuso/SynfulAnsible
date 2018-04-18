@@ -1,0 +1,31 @@
+---
+- name: Update repositories
+  apt:
+    update_cache: yes
+
+- name: Install expect
+  apt:
+    name: expect
+    state: latest
+
+- template:
+    src: "{{playbook_dir}}/roles/synful/templates/synfulinstall.sh"
+    dest: /tmp/synfulinstall.sh
+
+- name: Executablize shell script
+  file:
+    dest: /tmp/synfulinstall.sh
+    mode: a+x
+
+- name: Copy over expect script
+  template:
+    src: "{{playbook_dir}}/roles/synful/templates/synfulinstall.expect"
+    dest: /tmp/synfulinstall.expect
+
+- name: Executablize expect script
+  file:
+    dest: /tmp/synfulinstall.expect
+    mode: a+x
+
+- name: Execute expect script
+  command: /tmp/synfulinstall.expect
